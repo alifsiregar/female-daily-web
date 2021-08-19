@@ -4,7 +4,15 @@ import {
   Header,
   Categories,
   Hero,
-  Editor
+  Editor,
+  Match,
+  Articles,
+  Reviews,
+  Popular,
+  Videos,
+  Trending,
+  Brands,
+  Footer
 } from './components';
 import { getLandingPageData } from './services';
 
@@ -20,14 +28,30 @@ function App() {
       image: string
     }
   }[]>([]);
-  const [articlesInfo, setArticlesInfo] = useState<{}[]>([]);
-  const [reviewInfo, setReviewInfo] = useState<{}[]>([]);
+  
+  const [articlesInfo, setArticlesInfo] = useState<{
+    title: string,
+    author: string,
+    published_at : string
+  }[]>([]);
 
-  const getData = async () : Promise<void> => {
+  const [reviewInfo, setReviewInfo] = useState<{
+    user: string,
+    profile: string[],
+    product: {
+      image: string,
+      name: string,
+      desc: string
+    },
+    star: number,
+    comment: string
+  }[]>([]);
+
+  const getData = async() : Promise<void> => {
     await getLandingPageData().then((res:any) => {
       setEditorInfo(res["editor's choice"]);
-      setArticlesInfo(res["latest articles"]);
-      setReviewInfo(res["latest review"]);
+      setArticlesInfo(res['latest articles']);
+      setReviewInfo(res['latest review']);
     });
   };
 
@@ -42,6 +66,14 @@ function App() {
       <Categories />
       <Hero />
       <Editor editorInfo={editorInfo} />
+      <Match editorInfo={editorInfo} />
+      <Articles articlesInfo={articlesInfo} />
+      <Reviews reviewInfo={reviewInfo} />
+      <Popular />
+      <Videos />
+      <Trending editorInfo={editorInfo} />
+      <Brands />
+      <Footer />
     </>
   );
 }
