@@ -1,0 +1,9 @@
+export { default as logo } from './logo.png';
+export { default as googlePlay } from './googlePlay.png';
+export { default as appStore } from './appStore.png';
+export { default as innisfree } from './innisfree.png';
+export { default as bodyShop } from './body_shop.png';
+export { default as maybelline } from './maybelline.png';
+export { default as nivea } from './nivea.png';
+export { default as sk } from './sk.png';
+export { default as the_ordinary } from './the_ordinary.png';
