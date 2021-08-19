@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
     Container,
     EditorContent,
     HeaderText,
     CardContainer
 } from './styles';
-import Card from './Card';
+import Card from '../Card';
 
 const Editor: React.FC<{editorInfo: {
     editor: string,
@@ -17,10 +17,6 @@ const Editor: React.FC<{editorInfo: {
       image: string
     }
   }[]}> = ({editorInfo}) => {
-
-    useEffect(() => {
-        console.log(editorInfo);
-    }, []);
 
     return (
         <Container>
@@ -34,18 +30,34 @@ const Editor: React.FC<{editorInfo: {
                     </span>
                 </HeaderText>
                 <CardContainer>
-
                     {editorInfo.map((item, index) => {
-                        return <Card 
+                        return index !== editorInfo.length -1 ? 
+                                <Card
+                                    header
+                                    background={false}
+                                    border
+                                    match={false}
                                     editorName={item.editor}
                                     editorRole={item.role}
                                     productName={item.product.name}
                                     productRating={item.product.rating}
                                     productDescription={item.product.description}
-                                    productImage={item.product.image}
+                                    productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                /> : 
+                                <Card
+                                    header
+                                    background={false}
+                                    border
+                                    match={false}
+                                    editorName={item.editor}
+                                    editorRole={item.role}
+                                    productName={item.product.name}
+                                    productRating={item.product.rating}
+                                    productDescription={item.product.description}
+                                    productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                    margin={"0px"}
                                 />
                     })}
-
                 </CardContainer>
             </EditorContent>
         </Container>

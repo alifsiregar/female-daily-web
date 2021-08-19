@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
-    height: 800px;
     display: flex;
     justify-content: center;
 `;
 
 export const EditorContent = styled.div`
-    width: 1366px;
+    width: 1100px;
 `;
 
 export const HeaderText = styled.div`
@@ -26,6 +25,8 @@ export const HeaderText = styled.div`
 `;
 
 export const CardContainer = styled.div`
+    max-width: 100%;
     margin-top: 20px;
     display: flex;
+    justify-content: space-between;
 `;
