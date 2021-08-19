@@ -10,14 +10,16 @@ import {
     LoginButton,
     LoginLogo
 } from './styles';
-import fdLogo from '../../assets/images/logo.png';
+import {
+    logo
+} from '../../assets/images';
 
 const Header = () => {
     return (
         <Container>
             <HeaderContent>
                 <HeaderMenuButton />
-                <HeaderLogo src={fdLogo} alt="Female Daily Logo" />
+                <HeaderLogo src={logo} alt="Female Daily Logo" />
                 <SearchBar>
                     <SearchLogo />
                     <SearchInput 
