@@ -34,7 +34,7 @@ All of the images and logos used in the project are stored in the `images` folde
 
 ## Deployment and Workflow
 
-This project is deployed to github pages and can be accessed [here](https://alifsiregar.github.io/responsive-menu-bar/). The workflow consists of 4 steps:
+This project is deployed to github pages and can be accessed [here](https://alifsiregar.github.io/female-daily-web/). The workflow consists of 4 steps:
 
 1. `Install Dependencies`
 2. `Run Test`
