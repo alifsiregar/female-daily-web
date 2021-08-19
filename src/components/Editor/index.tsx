@@ -14,7 +14,7 @@ const Editor = () => {
     const editor = useSelector ((state: State) => state.editor);
 
     return (
-        <Container>
+        <Container title="Editor">
             <EditorContent>
                 <HeaderText>
                     <h2>

@@ -28,7 +28,7 @@ import {
 
 const Footer = () => {
     return (
-        <Container>
+        <Container title="Footer">
             <FooterContainer>
                 <FooterContent>
                     <LeftContainer>

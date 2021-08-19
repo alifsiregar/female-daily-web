@@ -31,7 +31,7 @@ const Brands = () => {
     ]
 
     return (
-        <Container>
+        <Container title="Brands">
             <BrandsContent>
                 <Header>
                     <HeaderText>

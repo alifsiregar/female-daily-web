@@ -18,7 +18,7 @@ const Match = ()  => {
     const editor = useSelector ((state: State) => state.editor);
 
     return (
-        <Container>
+        <Container title="Match">
             <MatchContent>
                 <TextContainer>
                     <h2>

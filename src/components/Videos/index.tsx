@@ -16,7 +16,7 @@ import {
 
 const Videos = () => {
     return (
-        <Container>
+        <Container title="Videos">
             <VideosContent>
                 <Header>
                     <HeaderText>

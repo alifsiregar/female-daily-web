@@ -17,7 +17,7 @@ const Articles  = () => {
     const articles = useSelector ((state: State) => state.articles);
 
     return (
-        <Container>
+        <Container title="Article">
             <ArticleContent>
                 <Header>
                     <HeaderText>

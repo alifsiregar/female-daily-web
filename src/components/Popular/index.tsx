@@ -12,7 +12,7 @@ import PopularCard from './PopularCard';
 
 const Popular = () => {
     return (
-        <Container>
+        <Container title="Popular">
             <PopularContent>
                 <Header>
                     <HeaderText>

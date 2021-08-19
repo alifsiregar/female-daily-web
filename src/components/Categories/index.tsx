@@ -18,7 +18,7 @@ const Categories = () => {
     ];
 
     return (
-        <Container>
+        <Container title="Categories">
             <CategoriesContent>
                 {categories.map((category, index) : JSX.Element => {
                     return <h4 key={index}>{category}</h4>

@@ -47,7 +47,7 @@ const Trending  = () => {
     };
 
     return (
-        <Container>
+        <Container title="Trending">
             <TrendingContent>
                 <Header>
                     <HeaderText>

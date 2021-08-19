@@ -16,7 +16,7 @@ import {
 
 const Header = () => {
     return (
-        <Container>
+        <Container title="Header">
             <HeaderContent>
                 <HeaderMenuButton />
                 <HeaderLogo src={logo} alt="Female Daily Logo" />

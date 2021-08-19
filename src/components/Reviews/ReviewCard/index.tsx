@@ -25,7 +25,7 @@ const ReviewCard : React.FC<{
     userInfo: string[] 
 }> = ({productName, productDesc, productImage, comment, userName, userInfo}) => {
     return (
-        <Container>
+        <Container title="Reviews">
             <CardContainer>
                 <TopCard>
                     <ProductImage src={productImage} />

@@ -52,7 +52,7 @@ const Reviews  = () => {
     };
 
     return (
-        <Container>
+        <Container title="Reviews">
             <ReviewContent>
                 <LatestReviewsContainer>
                     <Header>

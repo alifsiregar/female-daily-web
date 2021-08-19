@@ -9,7 +9,7 @@ import {
 
 const Hero = () => {
     return (
-        <Container>
+        <Container title="Hero">
             <TopFrame />
             <Billboard />
         </Container>
