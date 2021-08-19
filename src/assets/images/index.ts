@@ -8,3 +8,6 @@ export { default as nivea } from './nivea.png';
 export { default as sk } from './sk.png';
 export { default as the_ordinary } from './the_ordinary.png';
 export { default as match_bg } from './match_bg.png';
+export { default as placeholderUser } from './placeholderUser.png';
+export { default as placeholderProduct } from './placeholderProduct.png';
+export { default as placeholderArticle } from './placeholderArticle.png';

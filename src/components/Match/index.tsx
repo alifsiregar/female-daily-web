@@ -6,6 +6,9 @@ import {
     MatchButton,
     CardContainer
 } from'./styles';
+import {
+    placeholderProduct
+} from '../../assets/images';
 import Card from '../Card';
 import {
     Horizontal
@@ -45,7 +48,7 @@ const Match = ()  => {
                                         productName={item.product.name}
                                         productRating={item.product.rating}
                                         productDescription={item.product.description}
-                                        productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                        productImage={placeholderProduct}
                                     /> : 
                                     <Card
                                         header={false}
@@ -57,7 +60,7 @@ const Match = ()  => {
                                         productName={item.product.name}
                                         productRating={item.product.rating}
                                         productDescription={item.product.description}
-                                        productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                        productImage={placeholderProduct}
                                         margin={"0px"}
                                     />
                     })}

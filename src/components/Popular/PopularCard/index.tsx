@@ -9,11 +9,14 @@ import {
     ListIcon,
     MessageIcon
 } from './styles';
+import {
+    placeholderUser
+} from '../../../assets/images';
 
 const PopularCard = () => {
     return (
         <Container>
-            <Photo src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" />
+            <Photo src={placeholderUser} />
             <h2>
                 Embrace the curl
             </h2>

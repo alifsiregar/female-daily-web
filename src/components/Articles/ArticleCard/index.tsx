@@ -5,6 +5,9 @@ import {
     ArticleText,
     ArticleUserTime
 } from './styles';
+import {
+    placeholderArticle
+} from '../../../assets/images';
 
 const ArticleCard : React.FC<{
     title: string,
@@ -13,7 +16,7 @@ const ArticleCard : React.FC<{
 }> = ({title, author, published}) => {
     return (
         <Container>
-            <ArticleImage src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-body-oils-1544457771.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*" /> 
+            <ArticleImage src={placeholderArticle} /> 
             <ArticleText>
                 <h2>
                     { title }

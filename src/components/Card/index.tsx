@@ -10,6 +10,9 @@ import {
     RatingStar,
     ProductInfo
 } from './styles';
+import {
+    placeholderUser
+} from '../../assets/images';
 
 const Card : React.FC<
     {
@@ -30,7 +33,7 @@ const Card : React.FC<
         <Container margin={margin}>
             {header && 
                 <CardHeader>
-                    <EditorImage src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" />
+                    <EditorImage src={placeholderUser} />
                     <EditorInfo>
                         <h2>
                             { editorName }

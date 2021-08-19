@@ -2,6 +2,9 @@ import React from 'react';
 import {  useSelector } from 'react-redux';
 import { State } from '../../state';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import {
+    placeholderProduct
+} from '../../assets/images';
 import SwiperCore, {
   Pagination,
   Navigation,
@@ -93,7 +96,7 @@ const Trending  = () => {
                                                 productName={item.product.name}
                                                 productRating={item.product.rating}
                                                 productDescription={item.product.description}
-                                                productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                                productImage={placeholderProduct}
                                             />
                                         </SwiperSlide> 
                                     :
@@ -108,7 +111,7 @@ const Trending  = () => {
                                                 productName={item.product.name}
                                                 productRating={item.product.rating}
                                                 productDescription={item.product.description}
-                                                productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                                productImage={placeholderProduct}
                                                 margin={"0px"}
                                             />
                                         </SwiperSlide>
@@ -127,7 +130,7 @@ const Trending  = () => {
                                                 productName={item.product.name}
                                                 productRating={item.product.rating}
                                                 productDescription={item.product.description}
-                                                productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                                productImage={placeholderProduct}
                                             />
                                         </SwiperSlide> 
                                     :
@@ -142,7 +145,7 @@ const Trending  = () => {
                                                 productName={item.product.name}
                                                 productRating={item.product.rating}
                                                 productDescription={item.product.description}
-                                                productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                                productImage={placeholderProduct}
                                                 margin={"0px"}
                                             />
                                         </SwiperSlide>

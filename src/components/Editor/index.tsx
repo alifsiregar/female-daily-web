@@ -8,6 +8,9 @@ import {
 import Card from '../Card';
 import {  useSelector } from 'react-redux';
 import { State } from '../../state';
+import {
+    placeholderProduct
+} from '../../assets/images';
 
 const Editor = () => {
 
@@ -38,7 +41,7 @@ const Editor = () => {
                                         productName={item.product.name}
                                         productRating={item.product.rating}
                                         productDescription={item.product.description}
-                                        productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                        productImage={placeholderProduct}
                                     /> : 
                                     <Card
                                         header
@@ -50,7 +53,7 @@ const Editor = () => {
                                         productName={item.product.name}
                                         productRating={item.product.rating}
                                         productDescription={item.product.description}
-                                        productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                        productImage={placeholderProduct}
                                         margin={"0px"}
                                     />
                     })}

@@ -15,6 +15,9 @@ import {
     Commenter,
     CommenterImage
 } from './styles';
+import {
+    placeholderUser
+} from '../../../assets/images';
 
 const ReviewCard : React.FC<{
     productName: string,
@@ -61,7 +64,7 @@ const ReviewCard : React.FC<{
                 </BottomCard>
             </CardContainer>    
             <Commenter>
-                <CommenterImage src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" />
+                <CommenterImage src={placeholderUser} />
                 <span className="commenter-name">
                     { userName }
                 </span>
