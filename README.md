@@ -8,6 +8,7 @@
 * Typescript
 * React-Redux
 * Styled-Components
+* React-Icons
 * Axios
 * Swiper JS
 
