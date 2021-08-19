@@ -7,3 +7,4 @@ export { default as maybelline } from './maybelline.png';
 export { default as nivea } from './nivea.png';
 export { default as sk } from './sk.png';
 export { default as the_ordinary } from './the_ordinary.png';
+export { default as match_bg } from './match_bg.png';

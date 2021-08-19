@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import {
+    match_bg
+} from '../../assets/images';
 
 export const Container = styled.div`
     margin: 56px 0;
@@ -12,6 +15,8 @@ export const Container = styled.div`
 export const MatchContent = styled.div`
     margin-bottom: 28px;
     background-color: #fddae0;
+    background-image: url(${match_bg});
+    background-repeat: no-repeat;
     height: 350px;
     width: 1366px;
     padding: 20px;
@@ -25,6 +30,7 @@ export const TextContainer = styled.div`
     flex-direction: column;
     width: 350px;
     margin-right: 32px;
+    margin-left: 240px;
 
     h2 {
         margin-top: 0;
