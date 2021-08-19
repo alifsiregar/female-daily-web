@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.js": "/female-daily-web/static/js/main.10b5cd85.chunk.js",
+    "main.js.map": "/female-daily-web/static/js/main.10b5cd85.chunk.js.map",
+    "runtime-main.js": "/female-daily-web/static/js/runtime-main.66966d71.js",
+    "runtime-main.js.map": "/female-daily-web/static/js/runtime-main.66966d71.js.map",
+    "static/css/2.885c3689.chunk.css": "/female-daily-web/static/css/2.885c3689.chunk.css",
+    "static/js/2.b25ae0d4.chunk.js": "/female-daily-web/static/js/2.b25ae0d4.chunk.js",
+    "static/js/2.b25ae0d4.chunk.js.map": "/female-daily-web/static/js/2.b25ae0d4.chunk.js.map",
+    "index.html": "/female-daily-web/index.html",
+    "static/css/2.885c3689.chunk.css.map": "/female-daily-web/static/css/2.885c3689.chunk.css.map",
+    "static/js/2.b25ae0d4.chunk.js.LICENSE.txt": "/female-daily-web/static/js/2.b25ae0d4.chunk.js.LICENSE.txt",
+    "static/media/appStore.01794177.png": "/female-daily-web/static/media/appStore.01794177.png",
+    "static/media/body_shop.cd6a7d20.png": "/female-daily-web/static/media/body_shop.cd6a7d20.png",
+    "static/media/googlePlay.95f41ef5.png": "/female-daily-web/static/media/googlePlay.95f41ef5.png",
+    "static/media/innisfree.e84b47da.png": "/female-daily-web/static/media/innisfree.e84b47da.png",
+    "static/media/match_bg.ad41f012.png": "/female-daily-web/static/media/match_bg.ad41f012.png",
+    "static/media/nivea.d5a540d5.png": "/female-daily-web/static/media/nivea.d5a540d5.png",
+    "static/media/the_ordinary.f14cd348.png": "/female-daily-web/static/media/the_ordinary.f14cd348.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66966d71.js",
+    "static/css/2.885c3689.chunk.css",
+    "static/js/2.b25ae0d4.chunk.js",
+    "static/js/main.10b5cd85.chunk.js"
+  ]
+}
