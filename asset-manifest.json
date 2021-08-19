@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/female-daily-web/static/js/main.10b5cd85.chunk.js",
-    "main.js.map": "/female-daily-web/static/js/main.10b5cd85.chunk.js.map",
+    "main.js": "/female-daily-web/static/js/main.4f39b5ee.chunk.js",
+    "main.js.map": "/female-daily-web/static/js/main.4f39b5ee.chunk.js.map",
     "runtime-main.js": "/female-daily-web/static/js/runtime-main.66966d71.js",
     "runtime-main.js.map": "/female-daily-web/static/js/runtime-main.66966d71.js.map",
     "static/css/2.885c3689.chunk.css": "/female-daily-web/static/css/2.885c3689.chunk.css",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.66966d71.js",
     "static/css/2.885c3689.chunk.css",
     "static/js/2.b25ae0d4.chunk.js",
-    "static/js/main.10b5cd85.chunk.js"
+    "static/js/main.4f39b5ee.chunk.js"
   ]
 }
