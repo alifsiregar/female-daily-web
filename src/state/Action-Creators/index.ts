@@ -2,36 +2,12 @@ import { ActionType } from "../Action-Types";
 import { Dispatch } from 'redux'
 import { Action } from '../Actions'
 import { getLandingPageData } from '../../services';
+import {
+    IState
+} from '../../interfaces';
 
 const getData = async () => {
-    let contents: {
-        "editor's choice" : {
-            editor: string,
-            role: string,
-            product: {
-              name: string,
-              rating: number,
-              description: string,
-              image: string
-            }
-          }[],
-        "latest articles" : {
-            title: string,
-            author: string,
-            published_at : string
-          }[],
-        "latest review" : {
-            user: string,
-            profile: string[],
-            product: {
-              image: string,
-              name: string,
-              desc: string
-            },
-            star: number,
-            comment: string
-          }[]
-    } = {
+    let contents: IState['resContentComponent'] = {
         "editor's choice" :[],
         "latest articles" : [],
         "latest review" : []

@@ -1,17 +1,10 @@
 import { ActionType } from '../Action-Types';
 import {Action} from '../Actions';
+import { IState } from '../../interfaces';
 
-const initialState: {
-  title: string,
-  author: string,
-  published_at : string
-}[]= [];
+const initialState: IState['articlesComponent'] = [];
 
-const setArticlesInfo = (state: {
-  title: string,
-  author: string,
-  published_at : string
-}[] = initialState, action: Action) => {
+const setArticlesInfo = (state: IState['articlesComponent'] = initialState, action: Action) => {
     switch (action.type){
         case ActionType.ADD_ARTICLES_INFO: 
             return state = action.payload;

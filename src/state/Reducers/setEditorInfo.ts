@@ -1,27 +1,10 @@
 import { ActionType } from '../Action-Types';
 import {Action} from '../Actions';
+import { IState } from '../../interfaces';
 
-const initialState: {
-    editor: string,
-    role: string,
-    product: {
-      name: string,
-      rating: number,
-      description: string,
-      image: string
-    }
-  }[]= [];
+const initialState: IState['editorComponent'] = [];
 
-const setEditorInfo = (state:{
-    editor: string,
-    role: string,
-    product: {
-      name: string,
-      rating: number,
-      description: string,
-      image: string
-    }
-  }[] = initialState, action: Action) => {
+const setEditorInfo = (state: IState['editorComponent'] = initialState, action: Action) => {
     switch (action.type){
         case ActionType.ADD_EDITOR_INFO: 
             return state = action.payload;

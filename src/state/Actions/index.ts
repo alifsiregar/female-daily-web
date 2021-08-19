@@ -1,41 +1,21 @@
 import {ActionType} from '../Action-Types';
+import {
+  IState
+} from '../../interfaces';
 
 interface AddEditorAction {
     type: ActionType.ADD_EDITOR_INFO,
-    payload: {
-        editor: string,
-        role: string,
-        product: {
-          name: string,
-          rating: number,
-          description: string,
-          image: string
-        }
-    }[]
+    payload: IState['editorComponent']
 }
 
 interface AddArticlesAction {
   type: ActionType.ADD_ARTICLES_INFO,
-  payload: {
-    title: string,
-    author: string,
-    published_at : string
-  }[]
+  payload: IState['articlesComponent']
 }
 
 interface AddReviewAction {
   type: ActionType.ADD_REVIEW_INFO,
-  payload: {
-    user: string,
-    profile: string[],
-    product: {
-      image: string,
-      name: string,
-      desc: string
-    },
-    star: number,
-    comment: string
-  }[]
+  payload: IState['reviewComponent']
 }
 
 export type Action = AddEditorAction | AddArticlesAction | AddReviewAction
