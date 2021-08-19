@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# Female Daily Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+"Female Daily Website" is a landing page website made in React JS with Typescript. This project is made in order to complete one of the recruitment stage of Female Daily Network. Most components in this project are interactable (such as the sliders).
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+* React JS
+* Typescript
+* React-Redux
+* Styled-Components
+* Axios
+* Swiper JS
+
+## Structure
+
+Most of the important folders and files are inside the `src` folder. Inside, you will find 3 __files__:
+
+1. `App.tsx`
+2. `index.tsx`
+3. `styles.ts`
+
+`App.tsx` is where all the components are placed and also where the HTTP requests for the data are made via Redux dispatch. `index.tsx` is the root file and where the Redux store is placed. `styles.ts` is the file for global styles. 
+
+Aside from the files, you will also find 5 __folders__:
+
+1. `assets`
+2. `components`
+3. `interfaces`
+4. `services`
+5. `state`
+
+All of the images and logos used in the project are stored in the `images` folder inside `assets`. `components` folder contains all the components used in this project, there is also an `index.ts` file where all the components are exported in order to make importing easier in other files. `interfaces` is used to store all the data types needed. `services` contains the HTTP request used in this project via axios. `state` contains all the Redux folders and files needed.
+
+## Deployment and Workflow
+
+This project is deployed to github pages and can be accessed [here](https://alifsiregar.github.io/responsive-menu-bar/). The workflow consists of 4 steps:
+
+1. `Install Dependencies`
+2. `Run Test`
+3. `Build Project`
+4. `Deploy Project`
+
+To deploy the project, I am using JamesIves's [Github Pages Deploy Action](https://github.com/JamesIves/github-pages-deploy-action).
+
+## Documentation
+
+In order to start the app in development mode,  you can run this syntax in the project directory:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+By default, the app will open in [http://localhost:3000](http://localhost:3000). The page also has hot reload, which means that it will refresh if you make any edits.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+In order to test the project, you can run this syntax in the project directory:
 
-### `npm test`
+### `npm run test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This will run all tests in the project which makes sure all the components are rendered correctly.
+
+In order to build the project, you can run this syntax in the project directory:
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This will bundle the React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+The build is then minified and the app is ready to be deployed!
