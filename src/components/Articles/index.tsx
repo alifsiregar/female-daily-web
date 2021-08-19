@@ -9,13 +9,13 @@ import {
     CardContainer
 } from './styles';
 import ArticleCard from './ArticleCard';
+import {  useSelector } from 'react-redux';
+import { State } from '../../state';
 
-const Articles : React.FC<{
-    articlesInfo: {
-    title: string,
-    author: string,
-    published_at : string
-}[]}> = ({articlesInfo}) => {
+const Articles  = () => {
+
+    const articles = useSelector ((state: State) => state.articles);
+
     return (
         <Container>
             <ArticleContent>
@@ -36,8 +36,8 @@ const Articles : React.FC<{
                     </HeaderSeeMore>
                 </Header>
                 <CardContainer>
-                    {articlesInfo &&
-                        articlesInfo.map((article, index) => {
+                    {articles &&
+                        articles.map((article, index) => {
                             return <ArticleCard 
                                         key={index}
                                         title={article.title}

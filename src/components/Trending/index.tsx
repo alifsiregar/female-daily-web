@@ -1,4 +1,6 @@
 import React from 'react';
+import {  useSelector } from 'react-redux';
+import { State } from '../../state';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, {
   Pagination,
@@ -24,16 +26,9 @@ import 'swiper/components/navigation/navigation.min.css';
 
 SwiperCore.use([Pagination, Navigation]);
 
-const Trending : React.FC<{editorInfo: {
-    editor: string,
-    role: string,
-    product: {
-      name: string,
-      rating: number,
-      description: string,
-      image: string
-    }
-  }[]}> = ({editorInfo}) => {
+const Trending  = () => {
+
+    const editor = useSelector ((state: State) => state.editor);
 
     const navPrevButton = React.useRef<HTMLButtonElement>(null);
     const navNextButton = React.useRef<HTMLButtonElement>(null);
@@ -84,71 +79,73 @@ const Trending : React.FC<{editorInfo: {
                         slidesPerView={6}
                         spaceBetween={4}
                     >
-                        {editorInfo.map((item, index) => {
-                        return index !== editorInfo.length -1 ?
-                                <SwiperSlide>
-                                    <Card
-                                        header={false}
-                                        background
-                                        border={false}
-                                        match={false}
-                                        editorName={item.editor}
-                                        editorRole={item.role}
-                                        productName={item.product.name}
-                                        productRating={item.product.rating}
-                                        productDescription={item.product.description}
-                                        productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
-                                    />
-                                </SwiperSlide> 
-                            :
-                                <SwiperSlide>
-                                    <Card
-                                        header={false}
-                                        background
-                                        border={false}
-                                        match={false}
-                                        editorName={item.editor}
-                                        editorRole={item.role}
-                                        productName={item.product.name}
-                                        productRating={item.product.rating}
-                                        productDescription={item.product.description}
-                                        productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
-                                        margin={"0px"}
-                                    />
-                                </SwiperSlide>
+                        {editor &&
+                            editor.map((item, index) => {
+                                return index !== editor.length -1 ?
+                                        <SwiperSlide>
+                                            <Card
+                                                header={false}
+                                                background
+                                                border={false}
+                                                match={false}
+                                                editorName={item.editor}
+                                                editorRole={item.role}
+                                                productName={item.product.name}
+                                                productRating={item.product.rating}
+                                                productDescription={item.product.description}
+                                                productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                            />
+                                        </SwiperSlide> 
+                                    :
+                                        <SwiperSlide>
+                                            <Card
+                                                header={false}
+                                                background
+                                                border={false}
+                                                match={false}
+                                                editorName={item.editor}
+                                                editorRole={item.role}
+                                                productName={item.product.name}
+                                                productRating={item.product.rating}
+                                                productDescription={item.product.description}
+                                                productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                                margin={"0px"}
+                                            />
+                                        </SwiperSlide>
                         })}
-                        {editorInfo.map((item, index) => {
-                        return index !== editorInfo.length -1 ?
-                                <SwiperSlide>
-                                    <Card
-                                        header={false}
-                                        background
-                                        border={false}
-                                        match={false}
-                                        editorName={item.editor}
-                                        editorRole={item.role}
-                                        productName={item.product.name}
-                                        productRating={item.product.rating}
-                                        productDescription={item.product.description}
-                                        productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
-                                    />
-                                </SwiperSlide> 
-                            :
-                                <SwiperSlide>
-                                    <Card
-                                        header={false}
-                                        background
-                                        border={false}
-                                        match={false}
-                                        editorName={item.editor}
-                                        editorRole={item.role}
-                                        productName={item.product.name}
-                                        productRating={item.product.rating}
-                                        productDescription={item.product.description}
-                                        productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
-                                        margin={"0px"}
-                                    />
-                                </SwiperSlide>
+                        {editor &&
+                            editor.map((item, index) => {
+                                return index !== editor.length -1 ?
+                                        <SwiperSlide>
+                                            <Card
+                                                header={false}
+                                                background
+                                                border={false}
+                                                match={false}
+                                                editorName={item.editor}
+                                                editorRole={item.role}
+                                                productName={item.product.name}
+                                                productRating={item.product.rating}
+                                                productDescription={item.product.description}
+                                                productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                            />
+                                        </SwiperSlide> 
+                                    :
+                                        <SwiperSlide>
+                                            <Card
+                                                header={false}
+                                                background
+                                                border={false}
+                                                match={false}
+                                                editorName={item.editor}
+                                                editorRole={item.role}
+                                                productName={item.product.name}
+                                                productRating={item.product.rating}
+                                                productDescription={item.product.description}
+                                                productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                                margin={"0px"}
+                                            />
+                                        </SwiperSlide>
                         })}
                     </Swiper>
                 </CardContainer>

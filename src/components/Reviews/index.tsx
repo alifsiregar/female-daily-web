@@ -1,4 +1,6 @@
 import React from 'react';
+import {  useSelector } from 'react-redux';
+import { State } from '../../state';
 import {
     Container,
     ReviewContent,
@@ -29,17 +31,9 @@ import 'swiper/components/navigation/navigation.min.css';
 
 SwiperCore.use([Pagination, Navigation]);
 
-const Reviews : React.FC<{reviewInfo: {
-    user: string,
-    profile: string[],
-    product: {
-      image: string,
-      name: string,
-      desc: string
-    },
-    star: number,
-    comment: string
-  }[]}> = ({reviewInfo}) => {
+const Reviews  = () => {
+
+    const review = useSelector ((state: State) => state.review);
 
     const navPrevButton = React.useRef<HTMLButtonElement>(null);
     const navNextButton = React.useRef<HTMLButtonElement>(null);
@@ -91,8 +85,8 @@ const Reviews : React.FC<{reviewInfo: {
                             slidesPerView={2}
                             spaceBetween={0}
                         >
-                            {reviewInfo &&
-                                reviewInfo.map((review, index) => {
+                            {review &&
+                                review.map((review, index) => {
                                     return <SwiperSlide>
                                                 <ReviewCard
                                                     productName={review.product.name}

@@ -10,17 +10,13 @@ import Card from '../Card';
 import {
     Horizontal
 } from '../Advertisements';
+import {  useSelector } from 'react-redux';
+import { State } from '../../state';
 
-const Match : React.FC<{editorInfo: {
-    editor: string,
-    role: string,
-    product: {
-      name: string,
-      rating: number,
-      description: string,
-      image: string
-    }
-  }[]}> = ({editorInfo})  => {
+const Match = ()  => {
+
+    const editor = useSelector ((state: State) => state.editor);
+
     return (
         <Container>
             <MatchContent>
@@ -36,33 +32,34 @@ const Match : React.FC<{editorInfo: {
                     </MatchButton>
                 </TextContainer>
                 <CardContainer>
-                    {editorInfo.slice(0, 3).map((item, index) => {
-                        return index !== editorInfo.length -1 ? 
-                                <Card
-                                    header={false}
-                                    background
-                                    border={false}
-                                    match
-                                    editorName={item.editor}
-                                    editorRole={item.role}
-                                    productName={item.product.name}
-                                    productRating={item.product.rating}
-                                    productDescription={item.product.description}
-                                    productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
-                                /> : 
-                                <Card
-                                    header={false}
-                                    background
-                                    border={false}
-                                    match
-                                    editorName={item.editor}
-                                    editorRole={item.role}
-                                    productName={item.product.name}
-                                    productRating={item.product.rating}
-                                    productDescription={item.product.description}
-                                    productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
-                                    margin={"0px"}
-                                />
+                    {editor && 
+                        editor.slice(0, 3).map((item, index) => {
+                            return index !== editor.length -1 ? 
+                                    <Card
+                                        header={false}
+                                        background
+                                        border={false}
+                                        match
+                                        editorName={item.editor}
+                                        editorRole={item.role}
+                                        productName={item.product.name}
+                                        productRating={item.product.rating}
+                                        productDescription={item.product.description}
+                                        productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                    /> : 
+                                    <Card
+                                        header={false}
+                                        background
+                                        border={false}
+                                        match
+                                        editorName={item.editor}
+                                        editorRole={item.role}
+                                        productName={item.product.name}
+                                        productRating={item.product.rating}
+                                        productDescription={item.product.description}
+                                        productImage="https://image.femaledaily.com/dyn/640/images/prod-pics/product_1558085107_YOU_MAKEUP_800x800.png"
+                                        margin={"0px"}
+                                    />
                     })}
                 </CardContainer>
             </MatchContent>

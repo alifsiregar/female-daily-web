@@ -1,4 +1,4 @@
-import React, { useState, useEffect  } from 'react';
+import React, { useEffect  } from 'react';
 import { GlobalStyle } from './styles';
 import {
   Header,
@@ -14,50 +14,18 @@ import {
   Brands,
   Footer
 } from './components';
-import { getLandingPageData } from './services';
+import { bindActionCreators } from 'redux';
+import { useDispatch } from 'react-redux';
+import { actionCreators } from './state';
 
 function App() {
 
-  const [editorInfo, setEditorInfo] = useState<{
-    editor: string,
-    role: string,
-    product: {
-      name: string,
-      rating: number,
-      description: string,
-      image: string
-    }
-  }[]>([]);
-  
-  const [articlesInfo, setArticlesInfo] = useState<{
-    title: string,
-    author: string,
-    published_at : string
-  }[]>([]);
-
-  const [reviewInfo, setReviewInfo] = useState<{
-    user: string,
-    profile: string[],
-    product: {
-      image: string,
-      name: string,
-      desc: string
-    },
-    star: number,
-    comment: string
-  }[]>([]);
-
-  const getData = async() : Promise<void> => {
-    await getLandingPageData().then((res:any) => {
-      setEditorInfo(res["editor's choice"]);
-      setArticlesInfo(res['latest articles']);
-      setReviewInfo(res['latest review']);
-    });
-  };
+  const dispatch = useDispatch();
+  const { addLandingPageInfo } = bindActionCreators(actionCreators, dispatch);
 
   useEffect(() => {
-    getData();
-  }, []);
+    addLandingPageInfo();
+  }, [addLandingPageInfo]);
 
   return (
     <>
@@ -65,13 +33,13 @@ function App() {
       <Header />
       <Categories />
       <Hero />
-      <Editor editorInfo={editorInfo} />
-      <Match editorInfo={editorInfo} />
-      <Articles articlesInfo={articlesInfo} />
-      <Reviews reviewInfo={reviewInfo} />
+      <Editor />
+      <Match />
+      <Articles />
+      <Reviews />
       <Popular />
       <Videos />
-      <Trending editorInfo={editorInfo} />
+      <Trending />
       <Brands />
       <Footer />
     </>
